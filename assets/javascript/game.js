@@ -1,16 +1,20 @@
-// Theme of the game is: record labels
+// Theme of the game is: Learning to Code
 
-// Need to use key events to trigger behavior
-// onkeyup
-// 	- (listener) capture the key that was pressed, store in variable
+
 //  	- onkeyup- trigger a decrease in the guesses
-//
-// Next, we give JavaScript a function to execute when onkeyup event fires.
-// document.onkeyup = function(event) {
-// 	userText.textContent = event.key;
-//  };
-//
-//
-//
-//
-//
+
+document.onkeyup = function (event) {
+	// Capture the key that was pressed, store in userInput variable
+	var userInput = event.key;
+
+	// List of possible words user has to guess from
+	var possibleWords = ["Function", "Array", "Method", "Truthy", "event", "options", "include"]
+
+	// Creating a wordBeingGuessed that is set to a random word out of the possible words index
+	var wordBeingGuessed = possibleWords[Math.floor(Math.random() * possibleWords.length)];
+	
+
+	
+	console.log(wordBeingGuessed);
+	console.log(userInput);
+};
