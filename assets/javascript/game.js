@@ -16,6 +16,8 @@ document.onkeyup = function (event) {
 	// Pulling a random word out of the possibleWords array
 	var wordBeingGuessed = possibleWords[Math.floor(Math.random() * possibleWords.length)];
 	
+	// outputting variables in console to confirm they are set to what 
+	// I expect them to be
 	console.log(wordBeingGuessed);
 	console.log(userInput);
 	console.log(wins);
