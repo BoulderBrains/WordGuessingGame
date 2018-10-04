@@ -16,6 +16,12 @@ document.onkeyup = function (event) {
 	// Pulling a random word out of the possibleWords array
 	var wordBeingGuessed = possibleWords[Math.floor(Math.random() * possibleWords.length)];
 	
+	// Displaying wordBeingGuessed into approrate HTML container
+	var wordBeingGuessedContainer = document.getElementById('wordBeingGuessedContainer');
+	
+	// this is not currenlty working, not sure why
+	wordBeingGuessedContainer.appendChild(wordBeingGuessed);
+
 	// outputting variables in console to confirm they are set to what 
 	// I expect them to be
 	console.log(wordBeingGuessed);
@@ -25,7 +31,7 @@ document.onkeyup = function (event) {
 };
 
 // TODO: 
-// - create place in HTML file for wordBeingGuessed to be displayed
+
 // - display wordBeingGuessed into HTML element but 
 // masked as '_ _ _ _ _' (thinking a for loop, going through 
 // the characters and changing them to "_" might do the trick)
