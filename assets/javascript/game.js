@@ -11,16 +11,16 @@ document.onkeyup = function (event) {
 	var userInput = event.key;
 
 	// List of possible words user has to guess from
-	var possibleWords = ["Function", "Array", "Method", "Truthy", "event", "options", "include"]
+	var possibleWords = ["function", "array", "method", "truthy", "event", "options", "include"]
 
 	// Pulling a random word out of the possibleWords array
 	var wordBeingGuessed = possibleWords[Math.floor(Math.random() * possibleWords.length)];
 	
-	// Displaying wordBeingGuessed into approrate HTML container
+	// Iding the word being guessed container
 	var wordBeingGuessedContainer = document.getElementById('wordBeingGuessedContainer');
 	
-	// this is not currenlty working, not sure why
-	wordBeingGuessedContainer.appendChild(wordBeingGuessed);
+	// Displaying wordBeingGuessed into approrate HTML container
+	wordBeingGuessedContainer.innerText = wordBeingGuessed;
 
 	// outputting variables in console to confirm they are set to what 
 	// I expect them to be
@@ -32,9 +32,9 @@ document.onkeyup = function (event) {
 
 // TODO: 
 
-// - display wordBeingGuessed into HTML element but 
-// masked as '_ _ _ _ _' (thinking a for loop, going through 
+// mask the wordBeingGuessed as '_ _ _ _ _' (thinking a for loop, going through 
 // the characters and changing them to "_" might do the trick)
+
 // - Create function that compares userInput each letter of wordBeingGuessed
 // IF userInput === wordBeingGuessed[i] update wordBeingGuessed[i] back from _ to userInput
 // else remainingTrys-- &
